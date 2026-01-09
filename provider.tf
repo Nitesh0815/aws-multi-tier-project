@@ -1,3 +1,7 @@
+############################################
+# Terraform & Provider Configuration
+############################################
+
 terraform {
   required_providers {
     aws = {
@@ -7,6 +11,8 @@ terraform {
   }
 }
 
+# AWS provider
+# Region is controlled via variables for flexibility
 provider "aws" {
-  region = var.region # Uses variable from variables.tf
+  region = var.region
 }
